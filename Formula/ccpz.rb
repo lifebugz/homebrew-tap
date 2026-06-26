@@ -2,15 +2,15 @@ class Ccpz < Formula
   desc "Pluginize non-plugin Claude Code repos"
   homepage "https://github.com/lifebugz/ccpluginizer"
   # Required: the download URL embeds the version as a mid-path token
-  # (ccpz%400.8.0) with no parseable archive name at the tail, so brew cannot
+  # (ccpz%400.9.0) with no parseable archive name at the tail, so brew cannot
   # auto-scan it. Do not remove as redundant.
-  version "0.8.0"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/lifebugz/ccpluginizer/releases/download/%40ccpluginizer/ccpz%40#{version}/ccpz-darwin-arm64", using: :nounzip
-      sha256 "4e42bb32e2eb558680eac989a2cbe8c02aedec1a17a2ace24ce90526e1f33f11"
+      sha256 "e7b93a550a671660fdc77b3bf1b78f86f4675f9fcdbb8496bc284a5c2da8d589"
     end
     # arm64-only tap: no Intel-macOS branch on purpose. On an Intel Mac brew install
     # fails with "Error: ccpz: formula requires at least a URL" (documented in README).
@@ -19,11 +19,11 @@ class Ccpz < Formula
   on_linux do
     on_intel do
       url "https://github.com/lifebugz/ccpluginizer/releases/download/%40ccpluginizer/ccpz%40#{version}/ccpz-linux-x64", using: :nounzip
-      sha256 "4f74fc1c806a8dcae66c0695789233a6eccdfa7db5f20957cdecb3482acab3f0"
+      sha256 "4342e97943bda84a7e8d11ffec3487a27bcb893ea6b68931361055576c0fd4ba"
     end
     on_arm do
       url "https://github.com/lifebugz/ccpluginizer/releases/download/%40ccpluginizer/ccpz%40#{version}/ccpz-linux-arm64", using: :nounzip
-      sha256 "211016526794b64c02fcd0f3c1a3e546093b7abad3fcc8f9050380c8b0ffd24f"
+      sha256 "63a6099cd28c6262d1de1adf9e4eb0d9f96cc7c3c70b6f6831cec213f5f2cb43"
     end
   end
 
